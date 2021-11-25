@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  font_awesome_flutter: ^9.2.0
   carousel_pro: ^1.0.0
 
 
