@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paploshita/Constants/Constants.dart';
 class CustomButton extends StatelessWidget {
   Color borderColor,buttonColor,textColor;
   String text;
@@ -7,16 +8,26 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
+    return RaisedButton(
+      color: mainColor,
+      padding: EdgeInsets.symmetric(horizontal: 0),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(7),
-        border: Border.all(color: borderColor),
-        color: buttonColor
       ),
-      alignment: Alignment.center,
-      child: Text(text,style: TextStyle(color: textColor,fontSize: 17),),
+      onPressed: (){
+
+      },
+      child: Container(
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(7),
+          border: Border.all(color: borderColor),
+          color: buttonColor
+        ),
+        alignment: Alignment.center,
+        child: Text(text,style: TextStyle(color: textColor,fontSize: 17),),
+      ),
     );
   }
 }

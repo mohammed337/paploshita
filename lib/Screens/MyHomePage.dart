@@ -11,6 +11,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<Widget> carouselImages = [
+    Column(
+      children: [
+        Image.asset("img/Group -2.png",width: double.infinity,fit: BoxFit.fill,),
+        SizedBox(height: 40,)
+      ],
+    ),
+    Column(
+      children: [
+        Image.asset("img/Group -3.png",width: double.infinity,fit: BoxFit.fill,),
+        SizedBox(height: 40,)
+      ],
+    ),
+    Column(
+      children: [
+        Image.asset("img/Group 16.png",width: double.infinity,fit: BoxFit.fill,),
+        SizedBox(height: 40,)
+      ],
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,40 +55,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Expanded(flex: 2,child: CustomTextField(hint: "Zip Code",prefixIcon: Icon(Icons.location_on,color: textColor,),)),
                       const SizedBox(width: 5,),
-                      Expanded(flex: 1,child: CustomButton(borderColor: mainColor, buttonColor: mainColor, textColor: Colors.white, text: "Get Started", height: 47.0, width: 0.0),),
+                      Expanded(flex: 1,child: CustomButton(borderColor: mainColor, buttonColor: mainColor, textColor: Colors.white, text: "Get Started", height: 47.0, width: double.infinity),),
                     ],
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(height: 40,),
                   Text("Browse By Service Category",style: TextStyle(color: textColor,fontWeight: FontWeight.bold,fontSize: 17),),
-                  const SizedBox(height: 20,),
+                  const SizedBox(height: 30,),
                 ],
               ),
             ),
 
             SizedBox(
-                height:250.0,
+                height:400.0,
                 width: double.infinity,
                 child: Carousel(
-                  images: [
-                    Column(
-                      children: [
-                        Image.asset("img/Group -2.png",height: 200,width: double.infinity,fit: BoxFit.fill,),
-                        SizedBox(height: 50,)
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Image.asset("img/Group -3.png",height: 200,width: double.infinity,fit: BoxFit.fill,),
-                        SizedBox(height: 50,)
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Image.asset("img/Group 16.png",height: 200,width: double.infinity,fit: BoxFit.fill,),
-                        SizedBox(height: 50,)
-                      ],
-                    ),
-                  ],
+                  images: carouselImages,
                   dotSize: 9.0,
                   dotSpacing: 25.0,
                   dotColor: Colors.grey[300],
